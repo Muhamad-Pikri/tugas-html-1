@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form HTML</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    color: #666;
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+    </style>
 </head>
 <body>
-  
+    <h1>Buat Account Baru</h1>
+    <h2>Sign Up Form</h2>
+
+    <form action="welcome.html" method="post">
+        <label for="first_name">First name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Last name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <label for="nationality">Nationality:</label>
+        <select id="nationality" name="nationality" required>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label>Language Spoken:</label>
+        <input type="checkbox" id="bahasa" name="language" value="Bahasa Indonesia">
+        <label for="bahasa">Bahasa Indonesia</label>
+        <input type="checkbox" id="english" name="language" value="English">
+        <label for="english">English</label>
+        <input type="checkbox" id="other" name="language" value="Other">
+        <label for="other">Other</label>
+
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="5" cols="30"></textarea>
+
+        <input type="submit" value="Sign Up">
+    </form>
 </body>
 </html>
